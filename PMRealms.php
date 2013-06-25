@@ -11,7 +11,7 @@ apiversion=9
 */
 
 class PMRealms implements Plugin{
-  private $api, $server, $config;
+	private $api, $server, $config;
 	public function __construct(ServerAPI $api, $server = false){
 		$this->api = $api;
 		$this->server = ServerAPI::request();
@@ -29,7 +29,7 @@ class PMRealms implements Plugin{
 			console("[ERROR] [Realms] Please set your ownerName to your Realms name.");
 			++$error;
 		}
-		if($this->config->get("externalIP") == ""){
+		if($this->config->get("externalAddress") == ""){
 			console("[ERROR] [Realms] Please set your externalIP.");
 			++$error;
 		}
