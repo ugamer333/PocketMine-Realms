@@ -59,7 +59,7 @@ class PMRealms implements Plugin{
 		$this->api->asyncOperation(ASYNC_CURL_POST, array(
 			"url" => "http://peoapi.pocketmine.net/server/heartbeat",
 			"data" => array(
-				"ip" => $this->config->get("externalIP"),
+				"ip" => $this->config->get("externalAddress"),
 				"port" => (int) $this->config->get("externalPort"),
 				"ownerName" => $this->config->get("ownerName"),
 				"name" => $this->server->name,
